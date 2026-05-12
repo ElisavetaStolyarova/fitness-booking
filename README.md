@@ -36,8 +36,8 @@
 - localStorage 
 
 ## Запуск проекта
-
-
+Кликните на ссылку ниже:
+https://elisavetastolyarova.github.io/fitness-booking/
 
 ## Планы развития
 
