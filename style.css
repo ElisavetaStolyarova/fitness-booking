@@ -1,0 +1,905 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #872D8E;
+    font-family: 'Segoe UI', 'Roboto', 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.register-card {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    
+    border-radius: 32px;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem 2rem 2.2rem 2rem;
+    transition: all 0.2s ease;
+}
+.register-card h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+    letter-spacing: -0.3px;
+    margin-bottom: 1.8rem;
+    padding-left: 18px;
+    line-height: 1.2;
+    text-align: center;
+}
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 15px;
+    outline: none;
+    transition: all 0.2s;
+    color: #460235;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+}
+
+.input-group input:focus {
+    border-color: #640d7e;
+    background-color: #ffffff;
+    
+}
+
+.input-group input::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.register-btn {
+    width: 100%;
+    background: black;
+    color: white;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+    transition: all 0.25s ease;
+    font-family: inherit;
+    
+    transform: translateY(0);
+}
+
+.register-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #0f172a;
+}
+
+.register-btn:hover {
+    background: #1f2937;
+    letter-spacing: 1.5px;
+}
+
+.login-redirect {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #475569;
+    border-top: 1px solid #edf2f7;
+    padding-top: 1.3rem;
+    margin-top: 0.2rem;
+}
+
+.login-redirect a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 6px;
+    transition: color 0.2s;
+}
+
+.login-redirect a:hover {
+    color:#1f0825;
+    text-decoration: underline;
+}
+
+@media (max-width: 540px) {
+    .register-card {
+        padding: 1.6rem;
+    }
+    .register-card h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.4rem;
+    }
+    .input-group input {
+        padding: 12px 16px;
+    }
+    .register-btn {
+        font-size: 0.95rem;
+        padding: 12px 10px;
+    }
+}
+
+.input-group:first-of-type label {
+
+input[type="password"] {
+    letter-spacing: 0.2px;
+        }
+    }
+    
+    .form {
+        max-width: 480px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 32px;
+        box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.08);
+        padding: 2.2rem 2rem 2.2rem 2rem;
+        transition: all 0.2s ease;
+    }
+    
+    .form h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: black;
+        letter-spacing: -0.3px;
+        margin-bottom: 2rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .error-message {
+        background-color: #fee2e2;
+        color: #dc2626;
+        padding: 10px 16px;
+        border-radius: 16px;
+        font-size: 0.85rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
+        display: none;
+        font-weight: 500;
+        border-left: 4px solid #dc2626;
+    }
+    
+    .error-message.show {
+        display: block;
+    }
+    
+    .form input[type="text"],
+    .form input[type="password"] {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1rem;
+        font-family: inherit;
+        background-color: #f8fafc;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 20px;
+        outline: none;
+        transition: all 0.2s;
+        color: #1f2937;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+    
+    .form input[type="text"]:focus,
+    .form input[type="password"]:focus {
+        border-color: #872D8E;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(135, 45, 142, 0.15);
+    }
+    
+    .form input[type="text"]::placeholder,
+    .form input[type="password"]::placeholder {
+        color: #94a3b8;
+        font-weight: 400;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .btn-login {
+        width: 60px;
+        height: 60px;
+        background: black;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+        transition: all 0.25s ease;
+        font-family: inherit;
+        box-shadow: 0 4px 12px rgba(135, 45, 142, 0.3);
+        line-height: 1;
+        text-align: center;
+    }
+    
+    .btn-login:hover {
+        background:  #1f2937;
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(135, 45, 142, 0.4);
+    }
+    
+    .btn-login:active {
+        transform: scale(0.96);
+    }
+    
+    .register-link {
+        text-align: center;
+        font-size: 0.95rem;
+        color: #475569;
+        border-top: 1px solid #edf2f7;
+        padding-top: 1.3rem;
+        margin-top: 0.2rem;
+    }
+    
+    .register-link .link {
+        color: black;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 6px;
+        transition: color 0.2s;
+    }
+    
+    .register-link .link:hover {
+        text-decoration: underline;
+        color:  #1f2937;
+    }
+    
+    @media (max-width: 540px) {
+        .form {
+            padding: 1.6rem;
+        }
+        
+        .form h1 {
+            font-size: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
+        
+        .form input[type="text"],
+        .form input[type="password"] {
+            padding: 12px 16px;
+            font-size: 0.95rem;
+        }
+        
+        .btn-login {
+            width: 50px;
+            height: 50px;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        
+        .register-link {
+            font-size: 0.85rem;
+        }
+        
+        .forgot-password .link {
+            font-size: 0.8rem;
+        }
+    }
+    
+    .form input[type="password"] {
+        letter-spacing: 0.2px;
+    }
+
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+    
+    .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .container > .header-section h1 {
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: white;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        text-transform: uppercase;
+        margin: 0;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .classes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        justify-content: center;
+    }
+    .btn-bookings {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        color: white;
+        font-weight: 700;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 12px 24px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        align-items: center;
+    }
+    
+    .btn-bookings:hover {
+        background: white;
+        color: #872D8E;
+        border-color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .btn-bookings:active {
+        transform: translateY(0);
+    }
+    .class-card {
+        background: #ffffff;
+        border-radius: 28px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+    
+    .class-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.35);
+    }
+    .class-card img {
+    width: 100%;
+    height: normal;
+    object-fit: cover;
+    display: block;
+    align-items: center;
+    transition: transform 0.3s ease;
+    background-color: #f3e8f5;
+    margin-bottom: 20px;
+}
+    .card-header h2 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: black;
+        margin-bottom: 1rem;
+        padding-left: 18px;
+        text-align: center;
+    }
+    
+    .description {
+        color: #4b5563;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 2px solid #f0e6f0;
+        font-weight: 500;
+        text-align: center;
+    }
+    
+    .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.8rem;
+        padding: 0.5rem 0;
+        gap: 1rem;
+    }
+    
+    .time, .price {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1f2937;
+        background: #f3e8f5;
+        padding: 8px 18px;
+        border-radius: 40px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+        justify-content: center;
+    }
+  
+    .btn-register {
+        width: 100%;
+        background:black;
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        padding: 14px 20px;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        font-family: inherit;
+    }
+    
+    .btn-register:hover {
+        background: #1f2937;
+        transform: scale(0.98);
+        letter-spacing: 2px;
+        box-shadow: 0 4px 12px rgba(135, 45, 142, 0.3);
+    }
+    
+    .btn-register:active {
+        transform: scale(0.96);
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-content {
+        background-color: white;
+        border-radius: 32px;
+        padding: 2rem 2rem 2rem 2rem;
+        max-width: 420px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        animation: modalFadeIn 0.3s ease;
+        box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.4);
+    }
+    
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    
+    .close {
+        position: absolute;
+        right: 22px;
+        top: 18px;
+        font-size: 32px;
+        font-weight: bold;
+        cursor: pointer;
+        color: #aaa;
+        transition: color 0.2s;
+    }
+    
+    .close:hover {
+        color:  #1f2937;
+    }
+    
+    .modal-content h3 {
+        font-size: 1.8rem;
+        color: #1f2937;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+    
+    .modal-content p {
+        color: #374151;
+        font-size: 1.1rem;
+        margin-bottom: 1.8rem;
+        line-height: 1.5;
+    }
+    
+    .modal-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .btn-confirm, .btn-cancel {
+        padding: 12px 28px;
+        border: none;
+        border-radius: 40px;
+        font-weight: 700;
+        cursor: pointer;
+        font-family: inherit;
+        transition: all 0.2s;
+        font-size: 0.95rem;
+    }
+    
+    .btn-confirm {
+        background: #872D8E;
+        color: white;
+    }
+    
+    .btn-confirm:hover {
+        background:  #1f2937;
+        transform: scale(1.02);
+    }
+    
+    .btn-cancel {
+        background: #e5e7eb;
+        color: #4b5563;
+    }
+    
+    .btn-cancel:hover {
+        background: #d1d5db;
+        transform: scale(1.02);
+    }
+    
+    .notification {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%) translateY(100px);
+        background-color: #10b981;
+        color: white;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: 700;
+        z-index: 1001;
+        opacity: 0;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+    }
+    
+    .notification.show {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    
+    
+    
+    @media (max-width: 480px) {
+        body {
+            padding: 20px 12px;
+        }
+        
+        .container > h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .classes-grid {
+            gap: 1.2rem;
+        }
+        
+        .class-card {
+            padding: 1.2rem;
+            border-radius: 24px;
+        }
+        
+        .card-header h2 {
+            font-size: 1.4rem;
+            padding-left: 12px;
+            margin-bottom: 0.8rem;
+        }
+        
+        .description {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+        }
+        
+        .info-row {
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 1.2rem;
+        }
+        
+        .time, .price {
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            justify-content: center;
+        }
+        
+        .time::before, .price::before {
+            font-size: 0.85rem;
+        }
+        
+        .btn-register {
+            font-size: 0.85rem;
+            padding: 10px 14px;
+            letter-spacing: 1px;
+        }
+        
+        .modal-content {
+            padding: 1.5rem;
+            border-radius: 28px;
+        }
+        
+        .modal-content h3 {
+            font-size: 1.5rem;
+        }
+        
+        .modal-content p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-buttons {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .btn-confirm, .btn-cancel {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+        
+        .notification {
+            font-size: 0.8rem;
+            padding: 10px 16px;
+            bottom: 20px;
+        }
+    }
+    
+    .class-card:active {
+        transform: scale(0.98);
+    }
+    
+    #modalMessage strong {
+        color: #1f2937;
+    }
+    
+    .class-card {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: cardFadeIn 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+    
+    @keyframes cardFadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* Дополнительные стили для модальных окон */
+.success-message {
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 10px 16px;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+#userName {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-section > div {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #userName {
+        text-align: center;
+    }
+}
+.stats-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 28px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 20px;
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    min-width: 140px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #872D8E;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #4b5563;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.total-sum {
+    background: white;
+    border-radius: 20px;
+    padding: 0.8rem 1.8rem;
+    text-align: center;
+}
+
+.total-sum .stat-number {
+    color: #10b981;
+}
+
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.8rem;
+}
+
+.booking-card {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25);
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+}
+
+.booking-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0e6f0;
+}
+
+.booking-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #872D8E 0%, #b84dc4 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.booking-title h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.booking-details {
+    margin-bottom: 1.2rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #f3e8f5;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.detail-value {
+    font-weight: 700;
+    color: #1f2937;
+    font-size: 1rem;
+}
+
+.detail-value.price {
+    color: #872D8E;
+}
+
+.btn-cancel-booking {
+    width: 100%;
+    background: #fee2e2;
+    color: #dc2626;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 12px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-cancel-booking:hover {
+    background: #fecaca;
+}
+
+.empty-state {
+    background: white;
+    border-radius: 32px;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+    font-size: 1.8rem;
+    color: #1f2937;
+    margin-bottom: 0.8rem;
+}
+
+.btn-to-classes {
+    background: #872D8E;
+    color: white;
+    font-weight: 700;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+
+.back-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 640px) {
+    .bookings-grid {
+        grid-template-columns: 1fr;
+    }
+}

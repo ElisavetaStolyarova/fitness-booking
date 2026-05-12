@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Занятия - Студия здоровья</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Занятия</h1>
+            <div style="display: flex; gap: 1rem;">
+                <span id="userName" style="color: white; background: rgba(255,255,255,0.2); padding: 12px 20px; border-radius: 50px; font-weight: 600;"></span>
+                <button class="btn-bookings" onclick="goToBookings()">Мои записи</button>
+                <button class="btn-bookings" onclick="logout()" style="background: rgba(220,38,38,0.3);">Выйти</button>
+            </div>
+        </div>
+        
+        <div class="classes-grid">
+            <div class="class-card" data-id="yoga">
+                <div class="card-header">
+                    <h2>Йога</h2>
+                </div>
+                <p class="description">Занятия йогой в приятной, душевной атмосфере</p>
+                <div class="info-row">
+                    <span class="time">10:00</span>
+                    <span class="price">700 ₽</span>
+                </div>
+                <div style="background: #f3e8f5; border-radius: 20px; margin-bottom: 20px; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    <img src="йога1.jpg" alt="">
+                </div>
+                <button class="btn-register" onclick="registerForClass('Йога', 700, '10:00')">ЗАПИСАТЬСЯ</button>
+            </div>
+            
+            <div class="class-card" data-id="healthy-back">
+                <div class="card-header">
+                    <h2>Здоровая спина</h2>
+                </div>
+                <p class="description">Без боли. Без напряжения.</p>
+                <div class="info-row">
+                    <span class="time">12:00</span>
+                    <span class="price">800 ₽</span>
+                </div>
+                <div style="background: #f3e8f5; border-radius: 20px; margin-bottom: 20px; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    <img src="здоровая спина1.jpg" alt="">
+                </div>
+                <button class="btn-register" onclick="registerForClass('Здоровая спина', 800, '12:00')">ЗАПИСАТЬСЯ</button>
+            </div>
+            
+            <div class="class-card" data-id="pilates">
+                <div class="card-header">
+                    <h2>Пилатес</h2>
+                </div>
+                <p class="description">Укрепление корпуса и гибкость для всех уровней</p>
+                <div class="info-row">
+                    <span class="time">14:00</span>
+                    <span class="price">750 ₽</span>
+                </div>
+                <div style="background: #f3e8f5; border-radius: 20px; margin-bottom: 20px; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    <img src="пилатес.jpg" alt="">
+                </div>
+                <button class="btn-register" onclick="registerForClass('Пилатес', 750, '14:00')">ЗАПИСАТЬСЯ</button>
+            </div>
+            
+            <div class="class-card" data-id="stretching">
+                <div class="card-header">
+                    <h2>Растяжка</h2>
+                </div>
+                <p class="description">Растяжка, расслабься и вытянись</p>
+                <div class="info-row">
+                    <span class="time">16:30</span>
+                    <span class="price">850 ₽</span>
+                </div>
+                <div style="background: #f3e8f5; border-radius: 20px; margin-bottom: 20px; min-height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                    <img src="растяжка.jpg" alt="">
+                </div>
+                <button class="btn-register" onclick="registerForClass('Растяжка', 850, '16:30')">ЗАПИСАТЬСЯ</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Подтверждение записи</h3>
+            <p id="modalMessage"></p>
+            <div class="modal-buttons">
+                <button class="btn-confirm" onclick="confirmBooking()">Подтвердить</button>
+                <button class="btn-cancel" onclick="closeModal()">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
